@@ -26,7 +26,7 @@ function CusTable(tableProps: CusTableProps) {
         columns,
         dataSource,
         loading,
-        bordered = false,
+        bordered,
         sticky = true,
         onRowClick,
         renderFooter,

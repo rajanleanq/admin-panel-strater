@@ -28,6 +28,7 @@ export default function FormInput(inputProps: FormInputProps): any {
     ref,
     label,
     onKeyDown,
+    onBlur
   } = inputProps;
   return (
     <div className="flex flex-col gap-3 text-sm" key={key}>
@@ -48,6 +49,7 @@ export default function FormInput(inputProps: FormInputProps): any {
         name={name}
         type={type ?? "text"}
         suffix={suffix}
+        onBlur={inputProps.onBlur}
         prefix={prefix}
       />
       {errors && <ErrorMessage message={errors} />}

@@ -1,15 +1,12 @@
 'use client';
 import React from 'react'
 import CusTable from '@/components/ui/table/table';
-import { useRouter } from 'next-nprogress-bar';
-import { routes } from '@/core/constants/route';
 import { Button } from 'antd';
 import { PlusSquareOutlined } from '@ant-design/icons';
 import AddBpiModal from './add-bpi/add-bpi-modal';
 
 export default function Bpi() {
   const [showModal, setShowModal] = React.useState(false);
-  const router = useRouter();
   const userColumns = [
     {
       title: "SN",

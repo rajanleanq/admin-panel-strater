@@ -6,7 +6,8 @@ import {
     DesktopOutlined,
     UserOutlined,
     BorderHorizontalOutlined,
-    NodeIndexOutlined
+    NodeIndexOutlined,
+    CalendarOutlined
 } from '@ant-design/icons';
 import { useRouter } from 'next-nprogress-bar';
 import { usePathname } from 'next/navigation';
@@ -19,10 +20,11 @@ export default function Sidebar() {
     const path = usePathname();
     const router = useRouter();
     const dynamicMenuItems = [
-        { key: '/admin', label: 'Dashboard', icon: <DesktopOutlined />, onClick: () => { router.push("/admin") } },
         { key: routes.users, label: "Users", icon: <UserOutlined />, onClick: () => { router.push(routes.users) } },
         { key: routes.effectiveLife, label: "Effective Life", icon: <BorderHorizontalOutlined />, onClick: () => { router.push(routes.effectiveLife) } },
-        { key: routes.bpi, label: "Bpi", icon: <NodeIndexOutlined />, onClick: () => { router.push(routes.bpi) } },
+        { key: routes.bpi, label: "BPI", icon: <NodeIndexOutlined />, onClick: () => { router.push(routes.bpi) } },
+        { key: routes.year, label: "Year", icon: <CalendarOutlined />, onClick: () => { router.push(routes.year) } },
+
     ];
     const handleLogout = () => {
 
